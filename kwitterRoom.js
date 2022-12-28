@@ -13,7 +13,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
 
   //load user
-  function loadUser(){
+  function userLoad(){
     user = localStorage.getItem("userName")
     document.getElementById("userName").innerHTML = user;
   }
