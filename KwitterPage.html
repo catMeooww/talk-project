@@ -11,28 +11,19 @@
     <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
     <link rel="stylesheet" href="style.css">
-    <script src="KwitterRoom.js"></script>
+    <script src="KwitterPage.js"></script>
 </head>
 
 <body onload="loadUser()">
     <button id="logout" class="btn btn-danger" onclick="logout()">Log-Out</button>
     <br>
     <br>
+    <br>
     <center>
-        <hr>
-        <h3>Bem Vindo <h3 id="userName" class="color_white"></h3>
-        </h3>
-
-        <div class="form-group input_div_room_page">
-            <label>Add Room:</label>
-            <input type="text" id="roomName" class="form-control" placeholder="#room">
-        </div>
-
-        <button onclick="addRoom();" class="btn btn-success">Add Room</button>
-        <hr>
-        <h3 class="color_white">Talk Rooms</h3>
-
-        <div id="output"></div>
+        <div id="mensages"></div>
+        <br>
+        <input type="text" id="mensageInput" width="900"><sup><button onclick="send()" id="mensageButton"
+              width="100"  class="btn btn-success">Send</button></sup>
     </center>
 </body>
 
