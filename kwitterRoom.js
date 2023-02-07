@@ -1,17 +1,18 @@
+
+
 // Your web app's Firebase configuration
-import { initializeApp } from "firebase/app";
-const firebaseConfig = {
-  apiKey: "AIzaSyB4aKcBiy9PfDS42V_7CN60w3s7Lq5A8TY",
-  authDomain: "text-talking.firebaseapp.com",
-  databaseURL: "https://text-talking-default-rtdb.firebaseio.com",
-  projectId: "text-talking",
-  storageBucket: "text-talking.appspot.com",
-  messagingSenderId: "488401112127",
-  appId: "1:488401112127:web:0d1b551c0217b7dc963c8a"
+var firebaseConfig = {
+  apiKey: "AIzaSyD9-Va-TTj-62Q8EhOi93feGH2YPHCxJck",
+  authDomain: "text-twitter-7b963.firebaseapp.com",
+  databaseURL: "https://text-twitter-7b963-default-rtdb.firebaseio.com",
+  projectId: "text-twitter-7b963",
+  storageBucket: "text-twitter-7b963.appspot.com",
+  messagingSenderId: "283914978216",
+  appId: "1:283914978216:web:61c2b7ca02f30c12bc939d"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 //load user
 function loadUser() {
@@ -23,7 +24,7 @@ function addRoom() {
   roomName = document.getElementById("roomName").value;
 
   firebase.database().ref("/").child(roomName).update({
-    purpose: "adicionar nome de sala"
+    purpose: roomName
   });
 
   localStorage.setItem("roomName", roomName);
